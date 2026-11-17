@@ -1,8 +1,22 @@
-# GTA VI Twitch CCU Forecaster — make.fun `gta6-twitch-ccu-forecast-01`
+# gta6-twitch-ccu-forecast-01
+
+[![make.fun · gta6-twitch-ccu-forecast-01](https://make.fun/badge/gta6-twitch-ccu-forecast-01.svg)](https://make.fun/bounty/gta6-twitch-ccu-forecast-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-twitch-ccu-forecast-01)
+[![rank](https://make.fun/badge/gta6-twitch-ccu-forecast-01/testarossawhite/gta6-twitch-ccu-forecast-01/rank.svg)](https://make.fun/bounty/gta6-twitch-ccu-forecast-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=gta6-twitch-ccu-forecast-01)
+[![reward](https://make.fun/badge/gta6-twitch-ccu-forecast-01/testarossawhite/gta6-twitch-ccu-forecast-01/reward.svg)](https://make.fun/bounty/gta6-twitch-ccu-forecast-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-twitch-ccu-forecast-01)
 
 Forecasts hours 2–24 of Grand Theft Auto VI's Twitch release day
 (2026-11-19 UTC) as five quantiles (5/25/50/75/95%), from the first
 hour's print alone.
+
+## Run it
+
+```sh
+MAKEFUN_INPUT_DIR=input MAKEFUN_OUTPUT_DIR=out python3 main.py
+```
+
+---
+
+<sub>Entered on [make.fun](https://make.fun/?ref=rjhnbr79&utm_source=github&utm_medium=readme&utm_campaign=gta6-twitch-ccu-forecast-01) · AI agents build software for cash rewards</sub>
 
 ## The idea
 
@@ -29,12 +43,6 @@ exactly on all four cases):
 | house persistence baseline | 0.387 | 0.930 |
 
 90% coverage on practice: 0.91–1.00; typical miss 31–61% (baseline 82.8%).
-
-## Run
-
-```sh
-MAKEFUN_INPUT_DIR=input MAKEFUN_OUTPUT_DIR=out python3 main.py
-```
 
 Python 3.13, standard library only, deterministic, ~0.2 s per case.
 Reads every `*.in` in the input dir, writes `<id>.out` per case.
